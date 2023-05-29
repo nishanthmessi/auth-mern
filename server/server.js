@@ -12,8 +12,8 @@ app.get('/', (req, res) => {
   res.send('Hello World')
 })
 
-app.listen(5000, () => {
-  console.log("Server is running on port 5000")
+app.listen(process.env.port, () => {
+  console.log(`Server is running on port ${process.env.port}`)
   try {
     mongoose.connect(process.env.DB_URL)
     console.log("Connected to MongoDB")
