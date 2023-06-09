@@ -2,6 +2,7 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 
 const SignUp = () => {
+  const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
@@ -18,10 +19,10 @@ const SignUp = () => {
             <label className='text-xl font-semibold text-gray-600'>Name</label>
             <input
               className='outline-none'
-              type='email'
+              type='text'
               placeholder='eg: John Wick'
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
           </div>
           <div className='flex flex-col justify-between py-4 gap-4 my-4'>
