@@ -1,11 +1,11 @@
-import About from "./components/About"
-import Hero from "./components/Hero"
+import Navbar from "./components/Navbar"
+import { Outlet } from "react-router-dom"
 
 const App = () => {
   return (
     <>
-      <Hero/>
-      <About/>
+      <Navbar />
+      <Outlet />
     </>
   )
 }
