@@ -1,19 +1,20 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState, useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 
 const Login = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    console.log("Submitted")
+    console.log('Submitted')
   }
 
   return (
     <div className='flex justify-center items-center h-[94vh]'>
       <form onSubmit={submitHandler}>
-        <div className='p-8 border-2 rounded-lg'>
+        <div className='p-8 border-2 rounded-lg w-[90vw] sm:w-auto'>
           <div className='flex flex-col justify-between py-4 gap-4 my-4'>
             <label className='text-xl font-semibold text-gray-600'>Email</label>
             <input
@@ -46,7 +47,7 @@ const Login = () => {
 
           <div className='mt-4'>
             <p>
-              New User?{" "}
+              New User?{' '}
               <Link
                 to='/signup'
                 className='font-semibold hover:underline hover:text-gray-600'

@@ -1,20 +1,20 @@
-import { useState } from "react"
-import { Link } from "react-router-dom"
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const SignUp = () => {
-  const [name, setName] = useState("")
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
   const submitHandler = async (e) => {
     e.preventDefault()
-    console.log("Submitted")
+    console.log('Submitted')
   }
 
   return (
     <div className='flex justify-center items-center h-[94vh]'>
       <form onSubmit={submitHandler}>
-        <div className='p-8 border-2 rounded-lg'>
+        <div className='p-8 border-2 rounded-lg w-[90vw] sm:w-auto'>
           <div className='flex flex-col justify-between py-4 gap-4 my-4'>
             <label className='text-xl font-semibold text-gray-600'>Name</label>
             <input
@@ -57,7 +57,7 @@ const SignUp = () => {
 
           <div className='mt-4'>
             <p>
-              Existing User?{" "}
+              Existing User?{' '}
               <Link
                 to='/login'
                 className='font-semibold hover:underline hover:text-gray-600'
