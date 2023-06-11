@@ -20,7 +20,7 @@ const Profile = () => {
   useEffect(() => {
     setName(userInfo.name)
     setEmail(userInfo.email)
-  }, [userInfo.setName, userInfo.setEmail])
+  }, [userInfo.name, userInfo.email])
 
   const submitHandler = async (e) => {
     e.preventDefault()
@@ -35,7 +35,7 @@ const Profile = () => {
           email,
           password,
         }).unwrap()
-        dispatch(setCredentials({ ...res }))
+        dispatch(setCredentials(res))
         toast.success('Profile Updated Successfully')
       } catch (err) {
         toast.error(err?.data?.message || err.error)
