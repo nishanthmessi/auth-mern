@@ -37,13 +37,16 @@ const Navbar = () => {
         {userInfo ? (
           <>
             <div className='flex gap-6'>
-              <button className='flex items-center gap-2 hover:opacity-80'>
+              <Link
+                to='/profile'
+                className='flex items-center gap-2 hover:opacity-80'
+              >
                 <img
                   src='https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?w=826&t=st=1686466280~exp=1686466880~hmac=69f005ec7759e7478d38e544c5b46555155561d412dfb096e6494545507afe89'
                   className='h-8 w-8 rounded-full'
                 />
                 {userInfo.name}
-              </button>
+              </Link>
               <button
                 className='flex items-center gap-2 hover:text-red-500'
                 onClick={logoutHandler}
